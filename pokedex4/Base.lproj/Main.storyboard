@@ -12,6 +12,9 @@
         <array key="Avenir.ttc">
             <string>Avenir-Medium</string>
         </array>
+        <array key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -24,9 +27,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bu0-oV-Rpl">
                                 <rect key="frame" x="0.0" y="20" width="414" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokédex-4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-9e-HQm">
+                                        <rect key="frame" x="10" y="10" width="394" height="45"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="40"/>
+                                        <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.31764705879999999" green="0.64313725489999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="BnI-cL-gDh"/>
+                                    <constraint firstItem="PJz-9e-HQm" firstAttribute="leading" secondItem="Bu0-oV-Rpl" secondAttribute="leading" constant="10" id="KKg-EU-WOi"/>
+                                    <constraint firstItem="PJz-9e-HQm" firstAttribute="top" secondItem="Bu0-oV-Rpl" secondAttribute="top" constant="10" id="ODk-2B-r9L"/>
+                                    <constraint firstAttribute="bottom" secondItem="PJz-9e-HQm" secondAttribute="bottom" constant="10" id="X3Z-yP-yP1"/>
+                                    <constraint firstAttribute="trailing" secondItem="PJz-9e-HQm" secondAttribute="trailing" constant="10" id="oDl-0k-icp"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZKX-z0-oZZ">
@@ -116,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="31.884057971014496" y="37.5"/>
         </scene>
     </scenes>
     <resources>
