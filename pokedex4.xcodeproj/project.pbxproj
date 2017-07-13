@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		784741DA1F171C360047C2A1 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 784741D91F171C360047C2A1 /* pokemon.csv */; };
 		786F5AD51F16D7070059B0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F5AD41F16D7070059B0C9 /* AppDelegate.swift */; };
 		786F5AD71F16D7070059B0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F5AD61F16D7070059B0C9 /* ViewController.swift */; };
 		786F5ADA1F16D7070059B0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786F5AD81F16D7070059B0C9 /* Main.storyboard */; };
 		786F5ADC1F16D7070059B0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786F5ADB1F16D7070059B0C9 /* Assets.xcassets */; };
 		786F5ADF1F16D7070059B0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786F5ADD1F16D7070059B0C9 /* LaunchScreen.storyboard */; };
-		787E13F11F16DDA700A5A540 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 787E13F01F16DDA700A5A540 /* pokemon.csv */; };
 		787E13F41F16E02F00A5A540 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E13F31F16E02F00A5A540 /* Pokemon.swift */; };
 		788365C21F16ED2B007FAD8A /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788365C11F16ED2B007FAD8A /* PokeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		784741D91F171C360047C2A1 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pokemon.csv; path = "../../../Documents/Pokemon files/pokemon.csv"; sourceTree = "<group>"; };
 		786F5AD11F16D7070059B0C9 /* pokedex4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		786F5AD41F16D7070059B0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		786F5AD61F16D7070059B0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		786F5ADB1F16D7070059B0C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786F5ADE1F16D7070059B0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		786F5AE01F16D7070059B0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		787E13F01F16DDA700A5A540 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pokemon.csv; path = "../../../../../../Documents/Pokemon files/pokemon.csv"; sourceTree = "<group>"; };
 		787E13F31F16E02F00A5A540 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		788365C11F16ED2B007FAD8A /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +66,7 @@
 				786F5AD81F16D7070059B0C9 /* Main.storyboard */,
 				786F5ADB1F16D7070059B0C9 /* Assets.xcassets */,
 				786F5ADD1F16D7070059B0C9 /* LaunchScreen.storyboard */,
-				787E13F01F16DDA700A5A540 /* pokemon.csv */,
+				784741D91F171C360047C2A1 /* pokemon.csv */,
 				786F5AE01F16D7070059B0C9 /* Info.plist */,
 			);
 			path = pokedex4;
@@ -149,7 +149,7 @@
 			files = (
 				786F5ADF1F16D7070059B0C9 /* LaunchScreen.storyboard in Resources */,
 				786F5ADC1F16D7070059B0C9 /* Assets.xcassets in Resources */,
-				787E13F11F16DDA700A5A540 /* pokemon.csv in Resources */,
+				784741DA1F171C360047C2A1 /* pokemon.csv in Resources */,
 				786F5ADA1F16D7070059B0C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
