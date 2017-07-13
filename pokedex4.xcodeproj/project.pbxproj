@@ -30,7 +30,7 @@
 		7871F3281F17E5710053BDAE /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = pokemon.ttf; path = "../../../../Documents/Pokemon files/pokemon.ttf"; sourceTree = "<group>"; };
 		787E13F31F16E02F00A5A540 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		788365C11F16ED2B007FAD8A /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
-		78FCA87A1F1720760037AC3D /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = csv.swift; path = "../../../../Downloads/csvswift-master/csv.swift"; sourceTree = "<group>"; };
+		78FCA87A1F1720760037AC3D /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,9 @@
 		786F5AD31F16D7070059B0C9 /* pokedex4 */ = {
 			isa = PBXGroup;
 			children = (
+				7871F32A1F17EC730053BDAE /* Util */,
 				7871F3291F17EAD40053BDAE /* Controller */,
-				7871F3271F17E5150053BDAE /* Files */,
+				7871F3271F17E5150053BDAE /* Resources */,
 				788365C01F16EC53007FAD8A /* View */,
 				787E13F21F16DFFE00A5A540 /* Model */,
 				786F5AD41F16D7070059B0C9 /* AppDelegate.swift */,
@@ -76,12 +77,12 @@
 			path = pokedex4;
 			sourceTree = "<group>";
 		};
-		7871F3271F17E5150053BDAE /* Files */ = {
+		7871F3271F17E5150053BDAE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				7871F3281F17E5710053BDAE /* pokemon.ttf */,
 			);
-			path = Files;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7871F3291F17EAD40053BDAE /* Controller */ = {
@@ -92,11 +93,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		7871F32A1F17EC730053BDAE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				78FCA87A1F1720760037AC3D /* csv.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		787E13F21F16DFFE00A5A540 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				784741D91F171C360047C2A1 /* pokemon.csv */,
-				78FCA87A1F1720760037AC3D /* csv.swift */,
 				787E13F31F16E02F00A5A540 /* Pokemon.swift */,
 			);
 			path = Model;
@@ -105,6 +112,7 @@
 		788365C01F16EC53007FAD8A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				784741D91F171C360047C2A1 /* pokemon.csv */,
 				788365C11F16ED2B007FAD8A /* PokeCell.swift */,
 			);
 			path = View;
