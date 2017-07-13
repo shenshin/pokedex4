@@ -16,6 +16,12 @@ class PokeCell: UICollectionViewCell {
     
     var pokemon: Pokemon!
     
+    //скруглённые края у ячейки
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        layer.cornerRadius = 10.0
+    }
+    
     func configureCell(pokemon: Pokemon){
         self.pokemon = pokemon
         self.nameLbl.text = self.pokemon.name.capitalized
