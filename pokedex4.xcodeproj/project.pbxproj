@@ -80,6 +80,7 @@
 		7871F3271F17E5150053BDAE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				784741D91F171C360047C2A1 /* pokemon.csv */,
 				7871F3281F17E5710053BDAE /* pokemon.ttf */,
 			);
 			path = Resources;
@@ -112,7 +113,6 @@
 		788365C01F16EC53007FAD8A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				784741D91F171C360047C2A1 /* pokemon.csv */,
 				788365C11F16ED2B007FAD8A /* PokeCell.swift */,
 			);
 			path = View;
