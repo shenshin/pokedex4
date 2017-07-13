@@ -63,7 +63,6 @@
 				788365C01F16EC53007FAD8A /* View */,
 				787E13F21F16DFFE00A5A540 /* Model */,
 				786F5AD41F16D7070059B0C9 /* AppDelegate.swift */,
-				786F5AD61F16D7070059B0C9 /* ViewController.swift */,
 				786F5AD81F16D7070059B0C9 /* Main.storyboard */,
 				786F5ADB1F16D7070059B0C9 /* Assets.xcassets */,
 				786F5ADD1F16D7070059B0C9 /* LaunchScreen.storyboard */,
@@ -84,6 +83,7 @@
 		788365C01F16EC53007FAD8A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				786F5AD61F16D7070059B0C9 /* ViewController.swift */,
 				788365C11F16ED2B007FAD8A /* PokeCell.swift */,
 			);
 			path = View;
