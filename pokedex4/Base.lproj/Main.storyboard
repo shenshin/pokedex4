@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokédex-4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-9e-HQm">
-                                        <rect key="frame" x="150" y="21.333333333333339" width="115.33333333333331" height="33.666666666666657"/>
+                                        <rect key="frame" x="150.33333333333331" y="21.333333333333339" width="115.33333333333331" height="33.666666666666657"/>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="24"/>
                                         <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="0.90978167808219179" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -150,6 +150,7 @@
                     <connections>
                         <outlet property="collection" destination="gWN-2C-8kW" id="Ge4-Vr-ZjQ"/>
                         <outlet property="searchBar" destination="ZKX-z0-oZZ" id="kB5-HW-lkC"/>
+                        <segue destination="3cv-YS-g4T" kind="show" identifier="PokemonDetailVC" id="2ft-ih-LVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,13 +164,32 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="TxH-bk-wfn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axn-Kq-TsP">
+                                <rect key="frame" x="132" y="348" width="151" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="Twi-ck-bWv"/>
+                                    <constraint firstAttribute="height" constant="41" id="gYK-ZJ-74Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Axn-Kq-TsP" firstAttribute="centerX" secondItem="TxH-bk-wfn" secondAttribute="centerX" id="7EV-qQ-sV8"/>
+                            <constraint firstItem="Axn-Kq-TsP" firstAttribute="centerY" secondItem="TxH-bk-wfn" secondAttribute="centerY" id="jho-br-Duw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iBc-Nl-hkq"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="Axn-Kq-TsP" id="qkA-Hs-cP5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuV-kL-lFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="38"/>
+            <point key="canvasLocation" x="853.62318840579712" y="37.5"/>
         </scene>
     </scenes>
     <resources>
