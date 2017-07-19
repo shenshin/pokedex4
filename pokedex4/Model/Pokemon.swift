@@ -141,25 +141,19 @@ class Pokemon {
                                     let number = Int(evolURLtoArray[evolURLtoArray.count - 2])
                                     if number! < 0 || number! <= 718 {
                                         self._nextEvolutionNum = "\(number!)"
-                                    } else {
-                                        self._nextEvolutionNum = ""
                                     }
-                                } else {
-                                    self._nextEvolutionNum = ""
                                 }
                             }
                             if let evolutionName = evolutionDict["to"] as? String {
                                 self._nextEvolutionTxt = evolutionName
                             } else {
-                                self._nextEvolutionTxt = "no"
+                                self._nextEvolutionTxt = "No evolutions"
                             }
                         } else {
-                            self._nextEvolutionTxt = "no"
-                            self._nextEvolutionNum = ""
+                            self._nextEvolutionTxt = "No evolutions"
                         }
                     } else {
-                        self._nextEvolutionTxt = "no"
-                        self._nextEvolutionNum = ""
+                        self._nextEvolutionTxt = "No evolutions"                        
                     }
                 } // evolution
                 
@@ -171,7 +165,6 @@ class Pokemon {
                                 if let desc = descDic["description"] as? String {
                                     let newDesc = desc.replacingOccurrences(of: "POKMON", with: "Pokémon")
                                     self._description = newDesc
-                                    print(self._description)
                                 } else {
                                     self._description = "Description can not be uploaded1."
                                 }

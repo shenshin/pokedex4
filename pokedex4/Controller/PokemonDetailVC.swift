@@ -48,8 +48,6 @@ class PokemonDetailVC: UIViewController {
         super.viewDidLoad()
         
         pokemon.downloadPokemonDetails {
-            //всё, что будет здесь написано, будет исполнено после того как сетевой запрос будет завершён
-            print("here we are")
             self.updateUI()
         }
     }
@@ -65,8 +63,12 @@ class PokemonDetailVC: UIViewController {
         self.weightLbl.text = pokemon.weight
         self.attackLbl.text = "\(pokemon.attack)"
         self.evoLbl.text = pokemon.nextEvolutionTxt
+        if pokemon.nextEvolutionTxt == "No evolutions" || pokemon.nextEvolutionNum == "" {
+            self.nextEvoImg.isHidden = true
+        } else {
+            self.nextEvoImg.image = UIImage(named: pokemon.nextEvolutionNum)
+        }
         self.currentEvoImg.image = UIImage(named: "\(pokemon.pokedexID)")
-        self.nextEvoImg.image = UIImage(named: pokemon.nextEvolutionNum)
         self.descriptionLbl.text = pokemon.description
         
     }
