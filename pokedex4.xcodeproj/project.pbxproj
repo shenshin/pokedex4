@@ -16,9 +16,9 @@
 		786F5ADA1F16D7070059B0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786F5AD81F16D7070059B0C9 /* Main.storyboard */; };
 		786F5ADC1F16D7070059B0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 786F5ADB1F16D7070059B0C9 /* Assets.xcassets */; };
 		786F5ADF1F16D7070059B0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 786F5ADD1F16D7070059B0C9 /* LaunchScreen.storyboard */; };
-		787E13F41F16E02F00A5A540 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787E13F31F16E02F00A5A540 /* Pokemon.swift */; };
 		788365C21F16ED2B007FAD8A /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788365C11F16ED2B007FAD8A /* PokeCell.swift */; };
 		78A0D9F21F1D595200E1E371 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A0D9F11F1D595200E1E371 /* Constants.swift */; };
+		78F397231F1F1A6400DDFBDB /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F397221F1F1A6400DDFBDB /* Pokemon.swift */; };
 		78F4D0C91F1B5E8B003A7796 /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4D0C81F1B5E8B003A7796 /* PokemonDetailVC.swift */; };
 		78FCA87B1F1720760037AC3D /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FCA87A1F1720760037AC3D /* csv.swift */; };
 		E885605460BC1BB4B4C28283 /* Pods_pokedex4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511091A9EDD7E8357309DA8B /* Pods_pokedex4.framework */; };
@@ -37,9 +37,9 @@
 		786F5ADB1F16D7070059B0C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		786F5ADE1F16D7070059B0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		786F5AE01F16D7070059B0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		787E13F31F16E02F00A5A540 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		788365C11F16ED2B007FAD8A /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		78A0D9F11F1D595200E1E371 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78F397221F1F1A6400DDFBDB /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		78F4D0C81F1B5E8B003A7796 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		78FCA87A1F1720760037AC3D /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		A10E87D9FCD4DB5C380ECDD0 /* Pods-pokedex4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokedex4.release.xcconfig"; path = "Pods/Target Support Files/Pods-pokedex4/Pods-pokedex4.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		787E13F21F16DFFE00A5A540 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				787E13F31F16E02F00A5A540 /* Pokemon.swift */,
+				78F397221F1F1A6400DDFBDB /* Pokemon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,12 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F397231F1F1A6400DDFBDB /* Pokemon.swift in Sources */,
 				788365C21F16ED2B007FAD8A /* PokeCell.swift in Sources */,
 				786F5AD71F16D7070059B0C9 /* ViewController.swift in Sources */,
 				786F5AD51F16D7070059B0C9 /* AppDelegate.swift in Sources */,
 				78F4D0C91F1B5E8B003A7796 /* PokemonDetailVC.swift in Sources */,
 				78A0D9F21F1D595200E1E371 /* Constants.swift in Sources */,
-				787E13F41F16E02F00A5A540 /* Pokemon.swift in Sources */,
 				78FCA87B1F1720760037AC3D /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

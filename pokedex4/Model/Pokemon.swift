@@ -2,7 +2,7 @@
 //  Pokemon.swift
 //  pokedex4
 //
-//  Created by Алик Базин on 13.07.2017.
+//  Created by Aleksandr Shenshin on 19.07.17.
 //  Copyright © 2017 Ales Shenshin. All rights reserved.
 //
 
@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 class Pokemon {
+    
     private var _name: String! //?
     private var _pokedexID: Int! //?
     private var _description: String!
@@ -21,7 +22,6 @@ class Pokemon {
     private var _nextEvolutionTxt: String! //+
     private var _nextEvolutionNum: String! //+
     private var _pokemonURL: String! //-
-    
     
     var name: String {
         if self._name == nil {
@@ -99,13 +99,10 @@ class Pokemon {
         self._pokemonURL = URL_BASE + ULR_POKEMON + String(self.pokedexID) + "/"
     }
     
-    //функция для создания позднего связывания
     func downloadPokemonDetails(completed: @escaping DownloadComplete ) {
-    //func downloadPokemonDetails(completed: DownloadComplete) {
-        
-        Alamofire.request(self._pokemonURL).responseJSON { response in
-            
+        Alamofire.request(self._pokemonURL).responseJSON(completionHandler: {response in
             if let dict = response.result.value as? Dictionary<String, AnyObject> {
+                
                 if let weight = dict["weight"] as? String {
                     self._weight = weight
                 }
@@ -122,7 +119,6 @@ class Pokemon {
                     self._height = height
                 }
                 
-                
                 //Заполнение Типа покемона в переменную self._type в виде строки
                 if let typesArr = dict["types"] as? [Dictionary<String,String>], typesArr.count > 0 {
                     var type = ""
@@ -134,25 +130,6 @@ class Pokemon {
                 } else {
                     self._type = ""
                 }
-                
-                //Нахождение Описания для покемона
-                if let descArr = dict["descriptions"] as? [Dictionary<String,String>], descArr.count > 0 {
-                    if let url = descArr[0]["resource_uri"] {                        
-                        let fullURL = "\(URL_BASE)\(self.url)"
-                        Alamofire.request(fullURL).responseJSON(completionHandler: {response in
-                            if let descDic = response.result.value as? Dictionary<String, AnyObject> {
-                                if let desc = descDic["description"] as? String {
-                                    self._description = desc
-                                } else {
-                                    self._description = "Description can not be uploaded1."
-                                }
-                            } else {
-                                self._description = "Description can not be uploaded2."
-                            }
-                            completed()
-                        })
-                    }
-                } 
                 
                 //Эволюция: название и номер
                 if let evolutionArr = dict["evolutions"] as? Array<AnyObject> {
@@ -167,28 +144,53 @@ class Pokemon {
                                     } else {
                                         self._nextEvolutionNum = ""
                                     }
-                                    
                                 } else {
-                                    self._nextEvolutionTxt = "no"
                                     self._nextEvolutionNum = ""
                                 }
                             }
                             if let evolutionName = evolutionDict["to"] as? String {
                                 self._nextEvolutionTxt = evolutionName
+                            } else {
+                                self._nextEvolutionTxt = "no"
                             }
+                        } else {
+                            self._nextEvolutionTxt = "no"
+                            self._nextEvolutionNum = ""
                         }
                     } else {
                         self._nextEvolutionTxt = "no"
                         self._nextEvolutionNum = ""
                     }
+                } // evolution
+                
+                if let descArr = dict["descriptions"] as? [Dictionary<String,String>], descArr.count > 0 {
+                    if let myURL = descArr[0]["resource_uri"] {
+                        let descURL = "\(URL_BASE)\(myURL)"
+                        Alamofire.request(descURL).responseJSON(completionHandler: {response in
+                            if let descDic = response.result.value as? Dictionary<String, AnyObject> {
+                                if let desc = descDic["description"] as? String {
+                                    let newDesc = desc.replacingOccurrences(of: "POKMON", with: "Pokémon")
+                                    self._description = newDesc
+                                    print(self._description)
+                                } else {
+                                    self._description = "Description can not be uploaded1."
+                                }
+                            } else {
+                                self._description = "Description can not be uploaded2."
+                            }
+                            completed()
+                        })
+                    } else {
+                        self._description = "Description can not be uploaded3."
+                    }
                     
-                   
+                    
                 }
                 
-            } //if
+            } // if
+            
             completed()
-        } //response
-        
-    } //func
+        })
+    }
     
-} //class
+}
