@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "786F5AD01F16D7070059B0C9"
-               BuildableName = "pokedex4.app"
-               BlueprintName = "pokedex4"
-               ReferencedContainer = "container:pokedex4.xcodeproj">
+               BlueprintIdentifier = "E96F150DD7AA264630A34702D2717C8A"
+               BuildableName = "Pods_pokedex4.framework"
+               BlueprintName = "Pods-pokedex4"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,16 +44,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "786F5AD01F16D7070059B0C9"
-            BuildableName = "pokedex4.app"
-            BlueprintName = "pokedex4"
-            ReferencedContainer = "container:pokedex4.xcodeproj">
+            BlueprintIdentifier = "E96F150DD7AA264630A34702D2717C8A"
+            BuildableName = "Pods_pokedex4.framework"
+            BlueprintName = "Pods-pokedex4"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

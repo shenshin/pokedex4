@@ -7,18 +7,74 @@
 //
 
 import UIKit
+import Alamofire
 
 class PokemonDetailVC: UIViewController {
     
-    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var nameLbl: UILabel! //+
+    @IBOutlet weak var mainImg: UIImageView! //+
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var typeLbl: UILabel! //+
+    @IBOutlet weak var defenceLbl: UILabel! //+
+    @IBOutlet weak var heightLbl: UILabel! //+
+    @IBOutlet weak var pokedexLbl: UILabel! //+
+    @IBOutlet weak var weightLbl: UILabel! //+
+    @IBOutlet weak var attackLbl: UILabel! //+
+    @IBOutlet weak var evoLbl: UILabel! //+
+    @IBOutlet weak var currentEvoImg: UIImageView! //+
+    @IBOutlet weak var nextEvoImg: UIImageView!
+    
+    
     var pokemon: Pokemon!
+    
+   /* override func viewWillDisappear(_ animated: Bool) {
+        nameLbl.text = ""
+        mainImg.image = UIImage()
+        descriptionLbl.text = ""
+        typeLbl.text = ""
+        defenceLbl.text = ""
+        heightLbl.text = ""
+        pokedexLbl.text = ""
+        weightLbl.text = ""
+        attackLbl.text = ""
+        evoLbl.text = ""
+        currentEvoImg.image = UIImage()
+        nextEvoImg.image = UIImage()
+    }*/
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        nameLbl.text = pokemon.name
+        
+        pokemon.downloadPokemonDetails {
+            //всё, что будет здесь написано, будет исполнено после того как сетевой запрос будет завершён
+            print("here we are")
+            self.updateUI()
+        }
+    }
+    
+    func updateUI() {
+        
+        self.nameLbl.text = pokemon.name
+        self.mainImg.image = UIImage(named: "\(pokemon.pokedexID)")
+        self.typeLbl.text = pokemon.type
+        self.defenceLbl.text = "\(pokemon.defense)"
+        self.heightLbl.text = pokemon.height
+        self.pokedexLbl.text = "\(pokemon.pokedexID)"
+        self.weightLbl.text = pokemon.weight
+        self.attackLbl.text = "\(pokemon.attack)"
+        self.evoLbl.text = pokemon.nextEvolutionTxt
+        self.currentEvoImg.image = UIImage(named: "\(pokemon.pokedexID)")
+        self.nextEvoImg.image = UIImage(named: pokemon.nextEvolutionNum)
+        self.descriptionLbl.text = pokemon.description
+        
     }
 
-
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }
+
