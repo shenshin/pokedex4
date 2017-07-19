@@ -24,29 +24,10 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var currentEvoImg: UIImageView! //+
     @IBOutlet weak var nextEvoImg: UIImageView!
     
-    
     var pokemon: Pokemon!
     
-   /* override func viewWillDisappear(_ animated: Bool) {
-        nameLbl.text = ""
-        mainImg.image = UIImage()
-        descriptionLbl.text = ""
-        typeLbl.text = ""
-        defenceLbl.text = ""
-        heightLbl.text = ""
-        pokedexLbl.text = ""
-        weightLbl.text = ""
-        attackLbl.text = ""
-        evoLbl.text = ""
-        currentEvoImg.image = UIImage()
-        nextEvoImg.image = UIImage()
-    }*/
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         pokemon.downloadPokemonDetails {
             self.updateUI()
         }
@@ -72,11 +53,9 @@ class PokemonDetailVC: UIViewController {
         self.descriptionLbl.text = pokemon.description
         
     }
-
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-
 }
 

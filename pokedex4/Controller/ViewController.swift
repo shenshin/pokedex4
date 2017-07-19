@@ -85,7 +85,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         } else {
             poke = pokemon[indexPath.row]
         }
-        
         performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
     }
     
